@@ -55,11 +55,12 @@ public class Aquarium extends GFX {
 		g.fillRect(0, 0, getWidth(), getHeight());
 
 		// Draw the fish!
-		//DrawFish.facingLeft(g, Color.yellow, fish1X, 200);
+		DrawFish.facingLeft(g, Color.yellow, fish1X, 200);
 		// Draw the confused fish!
-		//DrawFish.facingRight(g, Color.green, fish2X, 300);
+		DrawFish.facingRight(g, Color.green, fish2X, 300);
         
-		Fish.draw(g, isLittle1);
+		Fish fish = new Fish(Fish.x, Fish.y, Fish.isFacingLeft, True, Fish.xDestination, Fish.color);
+		fish.draw(g);
 		// What if we wanted this little fish to swim, too?
 		DrawFish.smallFacingLeft(g, Color.red, fish3X, 100);
 		
